@@ -27,6 +27,15 @@ a {
         border-bottom: 3px solid #334756;
     }
 
+.button {
+    border: 3px solid var(--dark-color);
+}
+
+.button:hover {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
 /* -- LAYOUT TAGS -- */
 nav, aside, article, footer, #banner, #logo, #login {
     padding: 10px;
@@ -58,6 +67,9 @@ header div {
 #logo {
     background-color: var(--light-color);
     height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #login {
@@ -78,18 +90,18 @@ nav a {
 }
 
 main {
-    height: 500px;
+    height: 600px;
     display: flex;
 }
 aside {
     background-color: var(--medium-color);
     width: 250px;
-    height: 500px;
+    height: 600px;
 }
 article {
     background-color: var(--light-color);
     width: 750px;
-    height: 500px;
+    height: 600px;
 }
 
 footer {

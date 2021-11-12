@@ -3,6 +3,25 @@
     ViewBag.Title = "Turnos | Peluquería canina";
 }
 <link href="~/Content/table.css" rel="stylesheet" />
+<link href="~/Content/form.css" rel="stylesheet" />
+
+@using ( Html.BeginForm("GetByName", "Turno", FormMethod.Get) )
+{
+    <label>Buscar por nombre</label>
+    <br />
+    @Html.TextBox("name", null)
+    <input class="button" type="submit" value="Buscar" />
+}
+<br />
+@using ( Html.BeginForm("GetByCellphone", "Turno", FormMethod.Get) )
+{
+    <label>Buscar por celular</label>
+    <br />
+    @Html.TextBox("cellphone", null)
+    <input class="button" type="submit" value="Buscar" />
+}
+
+<br />
 
 <div id="tableContainer">
     <table>
@@ -14,6 +33,9 @@
             <th>@Html.DisplayNameFor(model => model.Edad)</th>
             <th>@Html.DisplayNameFor(model => model.NombreDuenio)</th>
             <th>@Html.DisplayNameFor(model => model.Celular)</th>
+
+            <th>Editar</th>
+            <th>Eliminar</th>
         </tr>
 
         @foreach (var item in Model)
@@ -26,6 +48,9 @@
                 <td>@Html.DisplayFor(modelItem => item.Edad)</td>
                 <td>@Html.DisplayFor(modelItem => item.NombreDuenio)</td>
                 <td>@Html.DisplayFor(modelItem => item.Celular)</td>
+
+                <td>@Html.ActionLink("Editar", "Edit", new { id = item.Id })</td>
+                <td>@Html.ActionLink("Eliminar", "Delete", new { id = item.Id })</td>
             </tr>
         }
     </table>

@@ -1,0 +1,56 @@
+﻿@model WebElReyCan.Models.Turno
+@{
+    ViewBag.Title = "Eliminar Turno | Peluquería canina";
+}
+<link href="~/Content/detail.css" rel="stylesheet" />
+
+@using ( Html.BeginForm("Delete", "Turno", FormMethod.Post) )
+{
+<fieldset>
+    <legend>¿Desea eliminar este turno?</legend>
+
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="display-fields">
+        <div class="display-label">@Html.DisplayNameFor(model => model.Fecha)</div>
+        <div class="display-text">@Html.DisplayFor(model => model.Fecha)</div>
+    </div>
+
+    <div class="display-fields">
+        <div class="display-label">@Html.DisplayNameFor(model => model.Hora)</div>
+        <div class="display-text">@Html.DisplayFor(model => model.Hora)</div>
+    </div>
+
+    <div class="display-fields">
+        <div class="display-label">@Html.DisplayNameFor(model => model.NombreMascota)</div>
+        <div class="display-text">@Html.DisplayFor(model => model.NombreMascota)</div>
+    </div>
+
+    <div class="display-fields">
+        <div class="display-label">@Html.DisplayNameFor(model => model.Raza)</div>
+        <div class="display-text">@Html.DisplayFor(model => model.Raza)</div>
+    </div>
+
+    <div class="display-fields">
+        <div class="display-label">@Html.DisplayNameFor(model => model.Edad)</div>
+        <div class="display-text">@Html.DisplayFor(model => model.Edad)</div>
+    </div>
+
+    <div class="display-fields">
+        <div class="display-label">@Html.DisplayNameFor(model => model.NombreDuenio)</div>
+        <div class="display-text">@Html.DisplayFor(model => model.NombreDuenio)</div>
+    </div>
+
+    <div class="display-fields">
+        <div class="display-label">@Html.DisplayNameFor(model => model.Celular)</div>
+        <div class="display-text">@Html.DisplayFor(model => model.Celular)</div>
+    </div>
+</fieldset>
+
+    <p>
+        <input class="button" type="submit" value="Eliminar" />
+    </p>
+}
+<p>
+    @Html.ActionLink("Volver a Turnos", "Index", "Turno")
+</p>
