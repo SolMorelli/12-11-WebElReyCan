@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/main.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="container">
+        <header>
+            <section id="banner">
+            </section>
+            <div>
+                <section id="logo">
+                    <h1>El Rey Can</h1>
+                </section>
+                <section id="login">
+                </section>
+            </div>
+        </header>
+        <nav>
+            @Html.ActionLink("Turnos", "Index", "Turno")
+            @Html.ActionLink("Inicio", "Index", "Home")
+        </nav>
+        <main>
+            <aside>
+                @if (IsSectionDefined("Left"))
+                {
+                    @RenderSection("Left")
+                }
+                else
+                {
+                <a href="https://es.wikipedia.org/wiki/Peluquero_canino">"¿Qué es un peluquero canino?"</a>
+                }
+            </aside>
+            <article>
+                @RenderBody()
+            </article>
+        </main>
+        <footer>
+            <a href="mailto:sol.andrea.morelli@gmail.com">elreycan@email.com</a>
+        </footer>
+    </div>
+</body>
+</html>

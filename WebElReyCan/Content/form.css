@@ -1,0 +1,33 @@
+﻿fieldset {
+    border: 3px solid var(--dark-color);
+    padding: 15px;
+}
+
+legend {
+    color: var(--dark-color);
+    padding: 0 15px 0 15px;
+    font-weight: bold;
+}
+
+.display-label {
+    font-weight: bold;
+}
+
+.display-fields {
+    margin: 15px 0;
+}
+
+input {
+    background-color: transparent;
+    color: var(--dark-color);
+    border: 3px solid var(--dark-color);
+    padding: 5px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 100ms ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}

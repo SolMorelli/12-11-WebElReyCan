@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Inicio | Peluquería canina";
+}
+
+@section Left
+{
+    <h4>Cuidado del pelaje canino</h4>
+    <p>
+        Para cuidar el pelo del perro en casa primero hay que coger el cepillo, pero no solo con un simple cepillado se frena la caída del pelo del can, sino que es muy importante saber cómo hacerlo bien.
+    </p>
+    <p>
+        ¿Un truco? Escoge bien el cepillo. ¿Más recomendaciones? No descuidar los baños caninos, elegir el champú adecuado, aprender a cortar su pelo y optar por una alimentación rica en grasas saludables.
+    </p>
+}
+
+<h2>Le damos la bienvenida</h2>
+<p><strong>Ingreso al sistema:</strong> @ViewBag.Date.</p>
+@Html.ActionLink("Ver turnos de hoy", "Index", "Turno")

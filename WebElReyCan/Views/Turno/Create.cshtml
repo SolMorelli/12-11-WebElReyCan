@@ -1,0 +1,57 @@
+﻿@model WebElReyCan.Models.Turno
+@{
+    ViewBag.Title = "Nuevo Turno | Peluquería canina";
+}
+<link href="~/Content/form.css" rel="stylesheet" />
+
+@using (Html.BeginForm("Create", "Turno", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(model => model.Fecha)
+        <br />
+        @Html.EditorFor(model => model.Fecha)
+        @Html.ValidationMessageFor(model => model.Fecha)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Hora)
+        <br />
+        @Html.EditorFor(model => model.Hora)
+        @Html.ValidationMessageFor(model => model.Hora)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.NombreMascota)
+        <br />
+        @Html.EditorFor(model => model.NombreMascota)
+        @Html.ValidationMessageFor(model => model.NombreMascota)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Raza)
+        <br />
+        @Html.EditorFor(model => model.Raza)
+        @Html.ValidationMessageFor(model => model.Raza)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Edad)
+        <br />
+        @Html.EditorFor(model => model.Edad)
+        @Html.ValidationMessageFor(model => model.Edad)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.NombreDuenio)
+        <br />
+        @Html.EditorFor(model => model.NombreDuenio)
+        @Html.ValidationMessageFor(model => model.NombreDuenio)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Celular)
+        <br />
+        @Html.EditorFor(model => model.Celular)
+        @Html.ValidationMessageFor(model => model.Celular)
+    </div>
+    <p>
+        <input class="button" type="submit" value="Crear" />
+    </p>
+}
+<p>
+    @Html.ActionLink("Volver a Turnos", "Index", "Turno")
+</p>

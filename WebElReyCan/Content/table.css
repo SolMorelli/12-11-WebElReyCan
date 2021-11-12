@@ -1,0 +1,32 @@
+﻿th, td {
+    padding: 15px;
+}
+
+table, td, th, tr {
+    border: none;
+    border-spacing: 0;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    background-color: var(--dark-color);
+    text-align: left;
+}
+
+tr:nth-child(2n+1) {
+    background-color: var(--medium-color);
+}
+
+#create {
+    background-color: var(--dark-color);
+    width: 100%;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+#tableContainer {
+    width: 100%;
+}
